@@ -1,0 +1,198 @@
+﻿@model LibraryApp.Models.SearchViewModel
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h1>Search Library</h1>
+
+<form asp-controller="Search"
+      asp-action="Index"
+      method="get"
+      class="row g-2 mb-4">
+
+    <div class="col-md-6">
+        <label for="query" class="form-label">
+            Search term
+        </label>
+
+        <input type="search"
+               id="query"
+               name="query"
+               value="@Model.Query"
+               class="form-control"
+               placeholder="Enter a title, author, artist, or manufacturer" />
+    </div>
+
+    <div class="col-md-3">
+        <label for="category" class="form-label">
+            Category
+        </label>
+
+        <select id="category"
+                name="category"
+                class="form-select">
+            <option value="Books"
+                    selected="@(Model.Category == "Books")">
+                Books
+            </option>
+
+            <option value="Music"
+                    selected="@(Model.Category == "Music")">
+                Music
+            </option>
+
+            <option value="Toys"
+                    selected="@(Model.Category == "Toys")">
+                Toys
+            </option>
+        </select>
+    </div>
+
+    <div class="col-md-3 d-flex align-items-end">
+        <button type="submit"
+                class="btn btn-primary">
+            Search
+        </button>
+    </div>
+</form>
+
+@if (!string.IsNullOrWhiteSpace(Model.Query))
+{
+    <h2>
+        Results for "@Model.Query" in @Model.Category
+    </h2>
+
+    @if (Model.Category == "Books")
+    {
+        if (!Model.Books.Any())
+        {
+            <p>No books were found.</p>
+        }
+        else
+        {
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Genre</th>
+                        <th>Library Code</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var book in Model.Books)
+                    {
+                        <tr>
+                            <td>@book.Name</td>
+                            <td>@book.Author</td>
+                            <td>@book.Genre</td>
+                            <td>@book.LibraryCode</td>
+                            <td>@book.Status</td>
+                            <td>
+                                <a asp-controller="Books"
+                                   asp-action="Details"
+                                   asp-route-id="@book.Id">
+                                    Details
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    }
+
+    @if (Model.Category == "Music")
+    {
+        if (!Model.Music.Any())
+        {
+            <p>No music items were found.</p>
+        }
+        else
+        {
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Artist</th>
+                        <th>Album</th>
+                        <th>Year</th>
+                        <th>Library Code</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var music in Model.Music)
+                    {
+                        <tr>
+                            <td>@music.Name</td>
+                            <td>@music.Artist</td>
+                            <td>@music.Album</td>
+                            <td>@music.Year</td>
+                            <td>@music.LibraryCode</td>
+                            <td>@music.Status</td>
+                            <td>
+                                <a asp-controller="Music"
+                                   asp-action="Details"
+                                   asp-route-id="@music.Id">
+                                    Details
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    }
+
+    @if (Model.Category == "Toys")
+    {
+        if (!Model.Toys.Any())
+        {
+            <p>No toys were found.</p>
+        }
+        else
+        {
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Manufacturer</th>
+                        <th>Minimum Age</th>
+                        <th>Library Code</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var toy in Model.Toys)
+                    {
+                        <tr>
+                            <td>@toy.Name</td>
+                            <td>@toy.Type</td>
+                            <td>@toy.Manufacturer</td>
+                            <td>@toy.MinimumAge</td>
+                            <td>@toy.LibraryCode</td>
+                            <td>@toy.Status</td>
+                            <td>
+                                <a asp-controller="Toys"
+                                   asp-action="Details"
+                                   asp-route-id="@toy.Id">
+                                    Details
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    }
+}
