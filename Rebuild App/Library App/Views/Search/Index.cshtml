@@ -71,38 +71,42 @@
         }
         else
         {
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>Genre</th>
-                        <th>Library Code</th>
-                        <th>Status</th>
-                        <th></th>
-                    </tr>
-                </thead>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                @foreach (var book in Model.Books)
+                {
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h2 class="h5">@book.Name</h2>
 
-                <tbody>
-                    @foreach (var book in Model.Books)
-                    {
-                        <tr>
-                            <td>@book.Name</td>
-                            <td>@book.Author</td>
-                            <td>@book.Genre</td>
-                            <td>@book.LibraryCode</td>
-                            <td>@book.Status</td>
-                            <td>
-                                <a asp-controller="Books"
-                                   asp-action="Details"
-                                   asp-route-id="@book.Id">
-                                    Details
-                                </a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+                                @if (!string.IsNullOrWhiteSpace(book.Description))
+                                {
+                                    <p>@book.Description</p>
+                                }
+
+                                <p class="mb-1">
+                                    <strong>Author:</strong> @book.Author
+                                </p>
+
+                                <p class="mb-1">
+                                    <strong>Genre:</strong> @book.Genre
+                                </p>
+
+                                <p class="mb-1">
+                                    <strong>Library code:</strong>
+                                    @book.LibraryCode
+                                </p>
+
+                                <p class="mb-0">
+                                    <strong>Status:</strong>
+                                    @book.Status
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
         }
     }
 
@@ -114,40 +118,46 @@
         }
         else
         {
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Artist</th>
-                        <th>Album</th>
-                        <th>Year</th>
-                        <th>Library Code</th>
-                        <th>Status</th>
-                        <th></th>
-                    </tr>
-                </thead>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                @foreach (var music in Model.Music)
+                {
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h2 class="h5">@music.Name</h2>
 
-                <tbody>
-                    @foreach (var music in Model.Music)
-                    {
-                        <tr>
-                            <td>@music.Name</td>
-                            <td>@music.Artist</td>
-                            <td>@music.Album</td>
-                            <td>@music.Year</td>
-                            <td>@music.LibraryCode</td>
-                            <td>@music.Status</td>
-                            <td>
-                                <a asp-controller="Music"
-                                   asp-action="Details"
-                                   asp-route-id="@music.Id">
-                                    Details
-                                </a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+                                @if (!string.IsNullOrWhiteSpace(music.Description))
+                                {
+                                    <p>@music.Description</p>
+                                }
+
+                                <p class="mb-1">
+                                    <strong>Artist:</strong> @music.Artist
+                                </p>
+
+                                <p class="mb-1">
+                                    <strong>Album:</strong> @music.Album
+                                </p>
+
+                                <p class="mb-1">
+                                    <strong>Year:</strong> @music.Year
+                                </p>
+
+                                <p class="mb-1">
+                                    <strong>Library code:</strong>
+                                    @music.LibraryCode
+                                </p>
+
+                                <p class="mb-0">
+                                    <strong>Status:</strong>
+                                    @music.Status
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
         }
     }
 
@@ -159,40 +169,47 @@
         }
         else
         {
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Manufacturer</th>
-                        <th>Minimum Age</th>
-                        <th>Library Code</th>
-                        <th>Status</th>
-                        <th></th>
-                    </tr>
-                </thead>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                @foreach (var toy in Model.Toys)
+                {
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h2 class="h5">@toy.Name</h2>
 
-                <tbody>
-                    @foreach (var toy in Model.Toys)
-                    {
-                        <tr>
-                            <td>@toy.Name</td>
-                            <td>@toy.Type</td>
-                            <td>@toy.Manufacturer</td>
-                            <td>@toy.MinimumAge</td>
-                            <td>@toy.LibraryCode</td>
-                            <td>@toy.Status</td>
-                            <td>
-                                <a asp-controller="Toys"
-                                   asp-action="Details"
-                                   asp-route-id="@toy.Id">
-                                    Details
-                                </a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+                                @if (!string.IsNullOrWhiteSpace(toy.Description))
+                                {
+                                    <p>@toy.Description</p>
+                                }
+
+                                <p class="mb-1">
+                                    <strong>Type:</strong> @toy.Type
+                                </p>
+
+                                <p class="mb-1">
+                                    <strong>Minimum age:</strong> @toy.MinimumAge
+                                </p>
+
+                                <p class="mb-1">
+                                    <strong>Manufacturer:</strong>
+                                    @toy.Manufacturer
+                                </p>
+
+                                <p class="mb-1">
+                                    <strong>Library code:</strong>
+                                    @toy.LibraryCode
+                                </p>
+
+                                <p class="mb-0">
+                                    <strong>Status:</strong>
+                                    @toy.Status
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
         }
     }
 }

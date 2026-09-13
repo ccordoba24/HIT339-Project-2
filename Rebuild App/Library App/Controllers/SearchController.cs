@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LibraryApp.Controllers;
 
-[Authorize(Roles = "Admin,Receptionist,Manager")]
+[AllowAnonymous]
 public class SearchController : Controller
 {
     private readonly ApplicationDbContext _context;

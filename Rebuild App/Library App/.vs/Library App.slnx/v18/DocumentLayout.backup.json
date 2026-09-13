@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Charlie\\source\\repos\\Rebuild App\\Library App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{72943EB9-B50B-8B2E-CF58-853929A9357F}|Library App.csproj|c:\\users\\charlie\\source\\repos\\rebuild app\\library app\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{72943EB9-B50B-8B2E-CF58-853929A9357F}|Library App.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{72943EB9-B50B-8B2E-CF58-853929A9357F}|Library App.csproj|c:\\users\\charlie\\source\\repos\\rebuild app\\library app\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72943EB9-B50B-8B2E-CF58-853929A9357F}|Library App.csproj|solutionrelative:controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72943EB9-B50B-8B2E-CF58-853929A9357F}|Library App.csproj|c:\\users\\charlie\\source\\repos\\rebuild app\\library app\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72943EB9-B50B-8B2E-CF58-853929A9357F}|Library App.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{72943EB9-B50B-8B2E-CF58-853929A9357F}|Library App.csproj|c:\\users\\charlie\\source\\repos\\rebuild app\\library app\\views\\search\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{72943EB9-B50B-8B2E-CF58-853929A9357F}|Library App.csproj|solutionrelative:views\\search\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72943EB9-B50B-8B2E-CF58-853929A9357F}|Library App.csproj|c:\\users\\charlie\\source\\repos\\rebuild app\\library app\\models\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72943EB9-B50B-8B2E-CF58-853929A9357F}|Library App.csproj|solutionrelative:models\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,66 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\Charlie\\source\\repos\\Rebuild App\\Library App\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\Charlie\\source\\repos\\Rebuild App\\Library App\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAwwFAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-09-13T03:16:27.671Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Charlie\\source\\repos\\Rebuild App\\Library App\\Views\\Search\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Search\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Charlie\\source\\repos\\Rebuild App\\Library App\\Views\\Search\\Index.cshtml",
-              "RelativeToolTip": "Views\\Search\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-13T03:15:40.307Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Charlie\\source\\repos\\Rebuild App\\Library App\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Charlie\\source\\repos\\Rebuild App\\Library App\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAARwA8AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-13T03:13:03.915Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "SearchController.cs",
               "DocumentMoniker": "C:\\Users\\Charlie\\source\\repos\\Rebuild App\\Library App\\Controllers\\SearchController.cs",
               "RelativeDocumentMoniker": "Controllers\\SearchController.cs",
               "ToolTip": "C:\\Users\\Charlie\\source\\repos\\Rebuild App\\Library App\\Controllers\\SearchController.cs",
               "RelativeToolTip": "Controllers\\SearchController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAgwFgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T03:06:26.409Z",
+              "WhenOpened": "2026-09-13T08:19:42.479Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SearchViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Charlie\\source\\repos\\Rebuild App\\Library App\\Models\\SearchViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\SearchViewModel.cs",
-              "ToolTip": "C:\\Users\\Charlie\\source\\repos\\Rebuild App\\Library App\\Models\\SearchViewModel.cs",
-              "RelativeToolTip": "Models\\SearchViewModel.cs",
-              "ViewState": "AgIAAAAAAADAAAAAAIApwA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T03:01:18.993Z",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Charlie\\source\\repos\\Rebuild App\\Library App\\Views\\Search\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Search\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Charlie\\source\\repos\\Rebuild App\\Library App\\Views\\Search\\Index.cshtml",
+              "RelativeToolTip": "Views\\Search\\Index.cshtml",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAuwLIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-13T03:15:40.307Z",
               "EditorCaption": ""
             }
           ]
