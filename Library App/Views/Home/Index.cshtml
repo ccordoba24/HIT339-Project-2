@@ -1,0 +1,58 @@
+﻿@* Sets the page title and displays the welcome section with a role-based library search form. *@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section class="home-page">
+    <div class="welcome-and-search">
+        <div class="welcome-content">
+            <h1>Welcome</h1>
+            <p>Our Local Library</p>
+        </div>
+
+        @if (User.IsInRole("Admin") ||
+             User.IsInRole("Receptionist") ||
+             User.IsInRole("Manager"))
+        {
+            <form asp-controller="Search"
+                  asp-action="Index"
+                  method="get"
+                  class="home-search-form">
+
+                <label for="query" class="visually-hidden">
+                    Search the library
+                </label>
+
+                <input type="search"
+                       id="query"
+                       name="query"
+                       class="form-control"
+                       placeholder="Search the library..."
+                       required />
+
+                <select name="category"
+                        class="form-select">
+                    <option value="Books">Books</option>
+                    <option value="Music">Music</option>
+                    <option value="Toys">Toys</option>
+                </select>
+
+                <button type="submit"
+                        class="btn btn-primary">
+                    Search
+                </button>
+            </form>
+        }
+    </div>
+
+    <a asp-controller="Search"
+       asp-action="Index"
+       class="btn btn-primary btn-lg">
+        Search the Library
+    </a>
+
+
+    <img src="~/images/library-banner.jpg"
+         alt="Local library"
+         class="home-image" />
+</section>

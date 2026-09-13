@@ -1,0 +1,69 @@
+@model LibraryApp.Models.Loan
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Loan</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="ItemId" class="control-label"></label>
+                <input asp-for="ItemId" class="form-control" />
+                <span asp-validation-for="ItemId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item" class="control-label"></label>
+                <input asp-for="Item" class="form-control" />
+                <span asp-validation-for="Item" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BorrowerId" class="control-label"></label>
+                <input asp-for="BorrowerId" class="form-control" />
+                <span asp-validation-for="BorrowerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Borrower" class="control-label"></label>
+                <input asp-for="Borrower" class="form-control" />
+                <span asp-validation-for="Borrower" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BorrowedDate" class="control-label"></label>
+                <input asp-for="BorrowedDate" class="form-control" />
+                <span asp-validation-for="BorrowedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DueDate" class="control-label"></label>
+                <input asp-for="DueDate" class="form-control" />
+                <span asp-validation-for="DueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReturnedDate" class="control-label"></label>
+                <input asp-for="ReturnedDate" class="form-control" />
+                <span asp-validation-for="ReturnedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FineAmount" class="control-label"></label>
+                <input asp-for="FineAmount" class="form-control" />
+                <span asp-validation-for="FineAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

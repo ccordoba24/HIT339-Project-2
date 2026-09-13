@@ -1,0 +1,90 @@
+﻿@model IEnumerable<LibraryApp.Models.Loan>
+
+@{
+    ViewData["Title"] = "Loans";
+}
+
+<h1>Loans</h1>
+
+<p>
+    <a asp-action="Create"
+       class="btn btn-primary">
+        Borrow Item
+    </a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Library Code</th>
+            <th>Borrower</th>
+            <th>Borrowed</th>
+            <th>Due</th>
+            <th>Returned</th>
+            <th>Fine</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var loan in Model)
+        {
+            <tr>
+                <td>
+                    @loan.Item?.Name
+                </td>
+
+                <td>
+                    @loan.Item?.LibraryCode
+                </td>
+
+                <td>
+                    @loan.Borrower?.FirstName
+                    @loan.Borrower?.LastName
+                </td>
+
+                <td>
+                    @loan.BorrowedDate
+                    .ToLocalTime()
+                    .ToShortDateString()
+                </td>
+
+                <td>
+                    @loan.DueDate
+                    .ToLocalTime()
+                    .ToShortDateString()
+                </td>
+
+                <td>
+                    @(loan.ReturnedDate?
+                        .ToLocalTime()
+                        .ToShortDateString()
+                        ?? "Not returned")
+                </td>
+
+                <td>
+                    @loan.FineAmount.ToString("C")
+                </td>
+
+                <td>
+                    @if (loan.ReturnedDate == null)
+                    {
+                        <form asp-action="Return"
+                              asp-route-id="@loan.Id"
+                              method="post">
+                            <button type="submit"
+                                    class="btn btn-success">
+                                Return
+                            </button>
+                        </form>
+                    }
+                    else
+                    {
+                        <span>Returned</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
