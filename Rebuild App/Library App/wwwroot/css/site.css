@@ -1,0 +1,117 @@
+html {
+    font-size: 14px;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.welcome-content {
+    width: 100%;
+    padding: 2rem 1rem 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+    .welcome-content h1,
+    .welcome-content p {
+        text-align: center;
+    }
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient( 135deg, #c7e2f8 0%, #d1e8fa 50%, #dceefe 100% );
+    background-attachment: fixed;
+}
+
+    /*
+    This is the div that contains the page content.
+    It must expand to fill the available height.
+*/
+    body > .container-fluid {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+        /*
+    The main element expands inside the content container.
+*/
+        body > .container-fluid > main {
+            flex: 1 0 auto;
+            width: 100%;
+            padding: 0 !important;
+        }
+
+.site-content > main {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+/* Page content spacing */
+.site-content {
+    width: 100%;
+    padding: 20px !important;
+    box-sizing: border-box;
+}
+
+    .site-content > main {
+        width: 100%;
+        padding: 0 !important;
+        box-sizing: border-box;
+    }
+
+@media (max-width: 576px) {
+    .site-content {
+        padding: 10px !important;
+    }
+}
+
+.home-image {
+    display: block;
+    width: 100%;
+    height: clamp(300px, 40vw, 450px);
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+    The footer remains in normal document flow,
+    but is pushed to the bottom on short pages.
+*/
+.site-footer {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-top: auto;
+    padding: 20px 0;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-content {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+}
+
+.footer {
+    width: 100%;
+}

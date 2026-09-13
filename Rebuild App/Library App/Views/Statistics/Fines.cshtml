@@ -1,0 +1,37 @@
+﻿@model IEnumerable<LibraryApp.Models.Loan>
+
+@{
+    ViewData["Title"] = "Fine statistics";
+}
+
+<div class="container p-4">
+    <h1>Fine statistics</h1>
+
+    <p>
+        <strong>Total fines:</strong>
+        @(((decimal)ViewBag.TotalFines).ToString("C"))
+    </p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Borrower</th>
+                <th>Item</th>
+                <th>Fine</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var loan in Model)
+            {
+                <tr>
+                    <td>
+                        @loan.Borrower?.FirstName
+                        @loan.Borrower?.LastName
+                    </td>
+                    <td>@loan.Item?.Name</td>
+                    <td>@loan.FineAmount.ToString("C")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

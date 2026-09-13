@@ -1,0 +1,27 @@
+﻿@model IEnumerable<dynamic>
+
+@{
+    ViewData["Title"] = "Item status statistics";
+}
+
+<div class="container p-4">
+    <h1>Item status statistics</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Status</th>
+                <th>Items</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var row in Model)
+            {
+                <tr>
+                    <td>@row.Status</td>
+                    <td>@row.Count</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

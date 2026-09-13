@@ -1,0 +1,51 @@
+@using LibraryApp.Models
+
+<h1>Borrow Item</h1>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly"
+         class="text-danger">
+    </div>
+
+    <div class="mb-3">
+        <label for="libraryCode">
+            Library Code
+        </label>
+
+        <input id="libraryCode"
+               name="libraryCode"
+               class="form-control"
+               required />
+    </div>
+
+    <div class="mb-3">
+        <label for="borrowerId">
+            Borrower
+        </label>
+
+        <select id="borrowerId"
+                name="borrowerId"
+                class="form-control"
+                required>
+            <option value="">
+                Select a borrower
+            </option>
+
+            @foreach (
+                var borrower
+                in (IEnumerable<Borrower>)ViewBag.Borrowers)
+            {
+                <option value="@borrower.Id">
+                    @borrower.FirstName
+                    @borrower.LastName
+                    (@borrower.Email)
+                </option>
+            }
+        </select>
+    </div>
+
+    <button type="submit"
+            class="btn btn-primary">
+        Borrow Item
+    </button>
+</form>
